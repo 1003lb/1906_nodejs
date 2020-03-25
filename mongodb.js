@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 // const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
-const uri = "mongodb://192.168.118.190";
+const uri = "mongodb://192.168.163.3";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
     //选择数据库的集合
@@ -29,7 +29,7 @@ client.connect(err => {
     // });
 
     //修改
-    collection.updateOne({email:'das@qq.com'},{$set:{email:'dddd@qq.com'}},function(err,result){
+    collection.updateOne({email:'das@qq.com'},{$set:{email:'tpl@qq.com'}},function(err,result){
         console.log(result);
     });
 
